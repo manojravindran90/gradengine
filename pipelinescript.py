@@ -4,9 +4,10 @@ import subprocess
 # Function to convert .ipynb to .py
 def convert_ipynb_to_py(ipynb_file):
     try:
-        os.system(f'jupyter nbconvert --to script {ipynb_file}')
+        os.system(f'jupyter nbconvert --to script --output-dir=. {ipynb_file}')
     except Exception as e:
         print(f"An error occurred while converting {ipynb_file} to .py: {e}")
+
 
 # Function to commit and push changes to Git
 def git_commit_and_push(commit_message):
