@@ -4,7 +4,7 @@ import subprocess
 # Function to convert .ipynb to .py
 def convert_ipynb_to_py(ipynb_file):
     try:
-        os.system(f'jupyter nbconvert --to script --output-dir=. {ipynb_file}')
+        os.system(f'jupyter nbconvert --to script --no-prompt --output-dir=. {ipynb_file}')
     except Exception as e:
         print(f"An error occurred while converting {ipynb_file} to .py: {e}")
 
